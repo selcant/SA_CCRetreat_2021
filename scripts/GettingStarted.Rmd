@@ -1,0 +1,67 @@
+---
+title: "Getting started"
+author: "Selcan Aydin"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: 
+      collapsed: false
+      smooth_scroll: false
+    df_print: paged
+    code_folding: show
+    code_download: true
+    theme: darkly
+---
+
+We will use `Rmarkdown` to analyze, plot and explain the data. There are a few essential packages that will make our results easier to reproduce and share. 
+
+
+-  First one is the `renv` package which enables the recording of all R packages and versions used in an Rstudio project and sync. See more here: https://rstudio.github.io/renv/articles/renv.html
+
+-  Second one is the `here` package which will let us use relative paths. When used together with Rstudio projects, `here()` function gets you to the Rstudio project main directory (i.e. where the .Rproj file is). We will use a `data` and `src` folders to keep our data and scripts organized. See more here: https://here.r-lib.org/
+
+
+-  Finally, we will collaborate using github. Here is more detail on how to connect to github, cache your credentials and more on how to use github (<https://happygitwithr.com/>). 
+
+## Initialize renv
+
+Note that I set `eval =FALSE` since some of the code below needs to run just once and it requires you to answer prompts. 
+
+```{r renv_activate, eval = FALSE}
+
+# run to get renv() started
+renv::init() # turn on renv. 
+renv::settings$use.cache(TRUE) # use the local R libraries
+renv::settings$snapshot.type("all") # record all R packages + dependencies
+
+# run as needed
+renv::hydrate()  
+renv::snapshot() 
+
+```
+
+## Setup
+
+Calling libraries that will be used in the project explicitly so that renv() can `hydrate`. 
+
+```{r setup}
+
+# libraries
+library(here)
+library(tidyverse)
+
+```
+
+## Use here()
+
+The `here` package allows the use of paths relative to the Rstudio project working directory. 
+
+```{r use_here}
+
+here("data", "file_to_load.Rdata")
+
+```
+
+
