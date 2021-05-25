@@ -17,7 +17,6 @@ output:
 
 We will use `Rmarkdown` to analyze, plot and explain the data. There are a few essential packages that will make our results easier to reproduce and share. 
 
-
 -  First one is the `renv` package which enables the recording of all R packages and versions used in an Rstudio project and sync. See more here: https://rstudio.github.io/renv/articles/renv.html
 
 -  Second one is the `here` package which will let us use relative paths. When used together with Rstudio projects, `here()` function gets you to the Rstudio project main directory (i.e. where the .Rproj file is). We will use a `data` and `src` folders to keep our data and scripts organized. See more here: https://here.r-lib.org/

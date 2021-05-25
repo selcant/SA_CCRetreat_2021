@@ -41,17 +41,13 @@ style_duo_accent(
 ```
 
 
-class: top, left
+class: middle, left
 
 # Main take-aways
 
-1. RStudio IDE + Rmarkdown is powerful! `r emo::ji("explosive")`   
+### - Rmarkdown is powerful! `r emo::ji("explosive")`.   
 
-2. Use R packages here() and renv() to remove relative paths and record what is utilized.
-
-3. Add on github + singularity `r emo::ji("right_arrow")` more power and reproducibility.
-
-4. RSconnect for sharing and publishing! `r emo::ji("globe_with_meridians")`   
+### - Use R packages here() and renv() to remove relative paths and record what is utilized.
 
 ---
 
@@ -65,9 +61,9 @@ background-position: middle, center
 .footnote[Art by [Allison Horst](https://twitter.com/allison_horst?lang=en)]
 ---
 
-class: inverse, middle, center
+class: middle, center
 
-# But, **what** is R Markdown?
+# But, *what* is R Markdown?
 
 ---
 
@@ -107,7 +103,7 @@ background-position: 95% 90%
 
 
 ---
-class: inverse, middle, center
+class: middle, center
 
 # Why use R Markdown?
 
@@ -123,9 +119,55 @@ class: inverse, middle, center
 
 `r emo::ji("globe_with_meridians")` Easily share data, results and code. All together! 
 
+--
+
+
 ???
 
 These are clearly not all advantages. But the ones I benefit the most.
+
+---
+
+class: bottom, center
+background-image: url(images/ERA_fig.png)
+background-size: 75%
+background-position: middle, center
+
+
+### It is a new `r emo::ji("globe")` with Executable Research Articles! 
+
+<https://elifesciences.org/labs/dc5acbde/welcome-to-a-new-era-of-reproducible-publishing>
+
+
+---
+class: top, left
+
+# How to use R Markdown effectively?
+
+* Utilize RStudio IDE.
+
+  + Project options.  
+  + Visual editing mode.  
+  + Multiple coding languages (Python, shell, SQL ...).
+  + Connect to github.
+
+--
+
+* Make your output pretty! 
+
+  + html themes: <https://bootswatch.com/3/>
+
+--
+
+* Make your code accessible by using the `code_download` option in the yaml.
+
+--
+
+* Use relative paths with `here()`.
+
+--
+
+* Record all R packages being utilized with `renv()`.
 
 ---
 
@@ -133,17 +175,16 @@ class: middle, center
 
 # setwd("C:\Users\selcan\path\that\only\I\have")
 
---
 
 Do you have a similar line your R scripts? Then `here()` is for you! 
 
 --
 
-Relative paths 
+Relative paths. 
 
 --
 
-Working directory is where the .Rproj file is.  
+Working directory is the top level directory.  
 
 ---
 
@@ -173,20 +214,26 @@ Portable: Easily transport your projects from one computer to another, even acro
 Reproducible: renv records the exact package versions you depend on, and ensures those exact versions are the ones that get installed wherever you go.
 
 ---
+class: middle, left
 
-class: middle, center
+## More on R Markdown...
 
-# rsconnect() 
+* xaringan() for making slides.
 
-Lets you publish html documents, websites and shiny apps. 
+* rticles() for writing scientific articles.   
+
+* distill(), bookdown(), blogdown() for making websites or online books.   
+
+* rsconnect() for publishing/sharing html documents.  
 
 
 ---
-class: center, middle
-
-# `r emo::ji("nerd_face")` Let's use them! 
-
----
 class: middle, center
+## Thank you! 
 
-## Thank you! `r emo::ji("smiley")` 
+If you want to learn more about R Markdown  
+
+
+`r emo::ji("point_down")`  
+
+<https://bookdown.org/yihui/rmarkdown/>
